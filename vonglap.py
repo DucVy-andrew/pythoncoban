@@ -24,16 +24,17 @@ while i <= 99:
 print("100")
 
 print("-----------VÍ DỤ 5---------------")
-try:
-    n = int(input("Nhập ngẫu nhiên số N: "))
-except ValueError:
-    print("Lỗi nhập liệu")
-else:
-    if n <= 0:
-        print("Dữ liệu nhập vào chưa hợp lệ")
+dk = True
+while dk:
+    try:
+        n = int(input("Nhập ngẫu nhiên số N: "))
+    except ValueError:
+        print("Lỗi nhập liệu")
     else:
         i = 1
         while i <= n:
             print(f"{i}",end=" ")
             i+=1
-
+        if n > 0:
+            break
+        
